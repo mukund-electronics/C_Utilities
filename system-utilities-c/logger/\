@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+#include "logger.h"
+
+static int *gCfgPtr = NULL;
+static int gMaxLevels = 0;
+static int gMaxModules = 0;
+
+int initLogger(int maxLevels, int maxModules, int *modulecfg){
+    if (gCfgPtr) {
+        printf("Logger already initialised\n");
+        return -1;
+    }
+    // For Debugging
+    printf("data received in the init_logger\n");
+    
+    printf("maxlevels : %d\nmaxModules : %d\n", maxLevels, maxModules);
+    
+    for(int i = 0; i <= maxModules; i++){
+        printf("module %d : %d\n", i, modulecfg[i]);
+    }
+
+    // Saving the array in the logger local array
+    gCfgPtr = modulecfg;
+    gMaxLevels = maxLevels;
+    gMaxModules = maxModules;
+}
+
+int printLog(int moduleId, int logId, char *data){
+    
+    // Condition check for Printing the logs according to Priority
+    if(cfg[moduleId] <= logId && cfg[moduleId] >= 0){
+        printf("%s\n", data);
+    }else 
+        return -1;
+
+    return 0;
+}
