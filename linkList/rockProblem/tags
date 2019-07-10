@@ -1,0 +1,18 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+addEle	rock.c	/^void addEle(ele *head, char elem) {    $/;"	f
+cntNode	rock.c	/^int cntNode(ele *head, int cntCh) {$/;"	f
+count	rock.c	/^    int count;$/;"	m	struct:ele_t	file:
+ele	rock.c	/^}ele;$/;"	t	typeref:struct:ele_t	file:
+ele_t	rock.c	/^typedef struct ele_t{$/;"	s	file:
+element	rock.c	/^    char element;$/;"	m	struct:ele_t	file:
+getEle	rock.c	/^int getEle(ele *head, char elem) {$/;"	f
+inCnt	rock.c	/^void inCnt(ele *head, char elem) {$/;"	f
+main	rock.c	/^void main() {$/;"	f
+next	rock.c	/^    struct ele_t *next;$/;"	m	struct:ele_t	typeref:struct:ele_t::ele_t	file:
+printNode	rock.c	/^void printNode(ele *head) {$/;"	f
+printstr	rock.c	/^int printstr(char **str, int n) {$/;"	f
